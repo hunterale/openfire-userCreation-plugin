@@ -8,6 +8,8 @@
                  java.util.Map"
 %>
 
+<%@ page import="org.apache.commons.text.StringEscapeUtils"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
@@ -113,7 +115,7 @@
         <tr class="c1">
             <td width="1%" colspan="2" nowrap>
                 User prefix:
-                &nbsp;<input type="text" name="prefix" value="<%=(prefix != null ? prefix : "user") %>" size="30" maxlength="75"/>
+                &nbsp;<input type="text" name="prefix" value="<%=  StringEscapeUtils.escapeHtml4(prefix != null ? prefix : "user") %>" size="30" maxlength="75"/>
             </td>
         </tr>
         <tr class="c1">
